@@ -34,7 +34,7 @@ void addItemToKeychain(void) {
         (__bridge id)kSecAttrService: kServiceName,
         (__bridge id)kSecAttrAccessControl: (__bridge_transfer id)createAccessControl(),
         (__bridge id)kSecAttrAccount: vault,
-        (__bridge id)kSecValueData: [password dataUsingEncoding:NSUTF8StringEncoding], // Convert password string to data
+        (__bridge id)kSecValueData: [password dataUsingEncoding:NSUTF8StringEncoding] // Convert password string to data
     };
 
     OSStatus status = SecItemAdd((__bridge CFDictionaryRef)keychainAttributes, NULL);
