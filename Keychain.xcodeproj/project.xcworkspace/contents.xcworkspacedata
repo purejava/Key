@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/ralph/git/macOS-keychain/Keychain.xcodeproj">
    </FileRef>
 </Workspace>

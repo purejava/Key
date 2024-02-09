@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Security/Security.h>
 
-static NSString * const kServiceName = @"org.purejava.key";
+// the kServiceName must be the same as in the project settings > Keychain Sharing > Keychain Groups
+static NSString * const kServiceName = @"org.purejava.Key";
 static NSString * const password = @"highly_secret";
 static NSString * const vault = @"exampleVault";
 

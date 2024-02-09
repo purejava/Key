@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA682DFC2B753D490082A665 /* Key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Key.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA682DFC2B753D490082A665 /* Keychain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keychain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA682DFF2B753D490082A665 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA682E002B753D490082A665 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA682E022B753D490082A665 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		CA682DFD2B753D490082A665 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA682DFC2B753D490082A665 /* Key.app */,
+				CA682DFC2B753D490082A665 /* Keychain.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,9 +71,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA682DFB2B753D490082A665 /* Key */ = {
+		CA682DFB2B753D490082A665 /* Keychain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA682E0F2B753D4B0082A665 /* Build configuration list for PBXNativeTarget "Key" */;
+			buildConfigurationList = CA682E0F2B753D4B0082A665 /* Build configuration list for PBXNativeTarget "Keychain" */;
 			buildPhases = (
 				CA682DF82B753D490082A665 /* Sources */,
 				CA682DF92B753D490082A665 /* Frameworks */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = Key;
+			name = Keychain;
 			productName = Key;
-			productReference = CA682DFC2B753D490082A665 /* Key.app */;
+			productReference = CA682DFC2B753D490082A665 /* Keychain.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CA682DF72B753D490082A665 /* Build configuration list for PBXProject "Key" */;
+			buildConfigurationList = CA682DF72B753D490082A665 /* Build configuration list for PBXProject "Keychain" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA682DFB2B753D490082A665 /* Key */,
+				CA682DFB2B753D490082A665 /* Keychain */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA682DF72B753D490082A665 /* Build configuration list for PBXProject "Key" */ = {
+		CA682DF72B753D490082A665 /* Build configuration list for PBXProject "Keychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA682E0D2B753D4B0082A665 /* Debug */,
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA682E0F2B753D4B0082A665 /* Build configuration list for PBXNativeTarget "Key" */ = {
+		CA682E0F2B753D4B0082A665 /* Build configuration list for PBXNativeTarget "Keychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA682E102B753D4B0082A665 /* Debug */,
