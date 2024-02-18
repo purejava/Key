@@ -10,9 +10,9 @@
 #import <Security/Security.h>
 
 // the kServiceName must be the same as in the project settings > Keychain Sharing > Keychain Groups
-static NSString * const kServiceName = @"org.purejava.Key";
+static NSString * const kServiceName = @"Cryptomator";
 static NSString * const password = @"highly_secret";
-static NSString * const vault = @"exampleVault";
+static NSString * const vault = @"_Zba09MU1wMK";
 
 SecAccessControlRef createAccessControl(void) {
     SecAccessControlCreateFlags flags = kSecAccessControlUserPresence;
@@ -75,6 +75,33 @@ void displayItemFromKeychain(void) {
     }
 }
 
+void updateItemFromKeychain(void) {
+    // Create a dictionary of search attributes to find the item in the keychain
+    NSDictionary *searchAttributes = @{
+        (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
+        (__bridge id)kSecAttrService: kServiceName,
+        (__bridge id)kSecAttrAccount: vault,
+        (__bridge id)kSecReturnAttributes: @YES,
+        (__bridge id)kSecReturnData: @YES,
+        (__bridge id)kSecMatchLimit: (__bridge id)kSecMatchLimitOne
+    };
+
+    CFDictionaryRef result = NULL;
+    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)searchAttributes, (CFTypeRef *)&result);
+    if (status == errSecSuccess && result != NULL) {
+        NSLog(@"Item found in keychain, updating it.");
+        NSDictionary *changeAttributes = @{
+            (__bridge id)kSecValueData: [password dataUsingEncoding:NSUTF8StringEncoding]
+        };
+        status = SecItemUpdate((__bridge CFDictionaryRef)searchAttributes, (__bridge CFDictionaryRef)changeAttributes);
+        NSLog(@"Updated. Status code: %d", (int)status);
+    } else if (status == errSecItemNotFound) {
+        NSLog(@"No matching item found in the keychain.");
+    } else {
+        NSLog(@"Error updating item in keychain. Status code: %d", (int)status);
+    }
+}
+
 void deleteItemFromKeychain(void) {
     NSDictionary *searchAttributes = @{
         (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
@@ -96,9 +123,10 @@ void deleteItemFromKeychain(void) {
 // Main function
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        addItemToKeychain();
+        //addItemToKeychain();
         displayItemFromKeychain();
-        deleteItemFromKeychain();
+        //updateItemFromKeychain();
+        //deleteItemFromKeychain();
     }
     return 0;
 }
