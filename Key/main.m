@@ -6,8 +6,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Foundation/Foundation.h>
-#import <Security/Security.h>
 
 // the kServiceName must be the same as in the project settings > Keychain Sharing > Keychain Groups
 static NSString * const kServiceName = @"Cryptomator";
@@ -19,7 +17,7 @@ SecAccessControlRef createAccessControl(void) {
     
     SecAccessControlRef accessControl = SecAccessControlCreateWithFlags(
         kCFAllocatorDefault,
-        kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
+        kSecAttrAccessibleWhenUnlocked,
         flags,
         NULL // Ignore any error
     );
