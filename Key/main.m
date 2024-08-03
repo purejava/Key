@@ -10,7 +10,7 @@
 // the kServiceName must be the same as in the project settings > Keychain Sharing > Keychain Groups
 static NSString * const kServiceName = @"Cryptomator";
 static NSString * const password = @"highly_secret";
-static NSString * const vault = @"_Zba09MU1wMK";
+static NSString * const vault = @"-BCrPdbeoc_y";
 
 SecAccessControlRef createAccessControl(void) {
     SecAccessControlCreateFlags flags = kSecAccessControlUserPresence;
